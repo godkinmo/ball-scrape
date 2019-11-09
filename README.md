@@ -16,3 +16,8 @@ Then we can spin up our containers to run this in development:
 
 Stop containers
 `./develop stop`
+
+
+```
+docker run -it -v ~/ball-scrape:/var/www/html node:latest bash
+```
