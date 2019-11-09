@@ -24,7 +24,7 @@ services:
      - ./express:/var/www/html/express:cached
     networks:
      - sdnet
-  frontend:
+  nuxt:
     build:
       context: ./docker/nuxt
       dockerfile: Dockerfile
