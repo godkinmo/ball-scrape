@@ -7,34 +7,14 @@ services:
     ports:
      - "${APP_PORT}:80"
      - "${APP_SECURE_PORT}:443"
-  node:
+  express:
     extends:
       file: docker-compose.base.yml
-      service: node
-  mysql:
+      service: express
+  nuxt:
     extends:
       file: docker-compose.base.yml
-      service: mysql
-    ports:
-     - "${DB_PORT}:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASS}"
-      MYSQL_DATABASE: "${DB_NAME}"
-      MYSQL_USER: "${DB_USER}"
-      MYSQL_PASSWORD: "${DB_PASS}"
-  redis:
-    extends:
-      file: docker-compose.base.yml
-      service: redis
-  certbot:
-    extends:
-      file: docker-compose.base.yml
-      service: certbot
+      service: nuxt
 networks:
   sdnet:
     driver: "bridge"
-volumes:
-  mysqldata:
-    driver: "local"
-  redisdata:
-    driver: "local"
