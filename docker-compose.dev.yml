@@ -4,6 +4,8 @@ services:
     extends:
       file: docker-compose.base.yml
       service: express
+    ports:
+     - "3000:3000"
   nuxt:
     extends:
       file: docker-compose.base.yml

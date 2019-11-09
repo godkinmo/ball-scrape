@@ -13,4 +13,4 @@ app.get('/api/matches', async (req, res, next) => {
   res.json(data)
 })
 
-app.listen(8080, () => console.log(`Example app listening on http://localhost:8080!`))
+app.listen(3000, () => console.log(`Example app listening on http://localhost:3000!`))
