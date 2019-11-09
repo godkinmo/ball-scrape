@@ -45,11 +45,6 @@ fi
 export APP_ENV=${APP_ENV:-local}
 export APP_PORT=${APP_PORT:-80}
 export APP_SECURE_PORT=${APP_SECURE_PORT:-443}
-export DB_PORT=${DB_PORT:-3306}
-export DB_ROOT_PASS=${DB_ROOT_PASS:-secret}
-export DB_NAME=${DB_NAME:-homestead}
-export DB_USER=${DB_USER:-homestead}
-export DB_PASS=${DB_PASS:-secret}
 
 # Decide which docker-compose file to use
 COMPOSE_FILE="dev"

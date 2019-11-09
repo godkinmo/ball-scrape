@@ -1,19 +1,5 @@
 version: '2'
 services:
-  app:
-    build:
-      context: ./docker/app
-      dockerfile: Dockerfile
-    image: ball-scrape/app
-    restart: always
-    environment:
-      APP_ENV: "${APP_ENV}"
-      XDEBUG_HOST: "${XDEBUG_HOST}"
-    volumes:
-     - ./express:/var/www/html/express:cached
-     - ./nuxt:/var/www/html/nuxt:cached
-    networks:
-     - sdnet
   express:
     build:
       context: ./docker/express

@@ -10,11 +10,11 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 3000
+EXPOSE 80
 
 WORKDIR /var/www/html/nuxt
 
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
+ENV NUXT_PORT=80
 
 CMD ["yarn", "start"]
