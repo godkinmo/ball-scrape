@@ -5,4 +5,5 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Build the Docker image with latest code
 docker build -f $DIR/app/Dockerfile -t ball-scrape/app:latest $DIR/app
-docker build -f $DIR/node/Dockerfile -t ball-scrape/node:latest $DIR/node
+docker build -f $DIR/express/Dockerfile -t ball-scrape/express:latest $DIR/express
+docker build -f $DIR/nuxt/Dockerfile -t ball-scrape/nuxt:latest $DIR/nuxt
