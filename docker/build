@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Get the directory of the build script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Build the Docker image with latest code
+docker build -f $DIR/app/Dockerfile -t ball-scrape/app:latest $DIR/app
+docker build -f $DIR/node/Dockerfile -t ball-scrape/node:latest $DIR/node
