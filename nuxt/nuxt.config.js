@@ -87,7 +87,7 @@ export default {
     '/api': {
       target: process.env.BACKEND_URL,
       pathRewrite: {
-        '^/api': '/'
+        '^/api': '/api'
       }
     }
   },

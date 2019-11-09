@@ -30,7 +30,7 @@ export default {
   }),
 
   mounted() {
-    axios.get('/api')
+    axios.get('/api/matches')
       .then(({ data }) => {
         this.matches = data
         this.loading = false

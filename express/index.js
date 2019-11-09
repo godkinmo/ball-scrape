@@ -7,7 +7,7 @@ dontenv.config()
 
 const app = express()
 
-app.get('/', async (req, res, next) => {
+app.get('/api/matches', async (req, res, next) => {
   const data = await getTodayMatches()
 
   res.json(data)
