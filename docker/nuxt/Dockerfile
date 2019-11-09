@@ -12,7 +12,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 EXPOSE 3000
 
-WORKDIR /var/www/html/frontend
+WORKDIR /var/www/html/nuxt
 
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000

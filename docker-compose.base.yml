@@ -10,7 +10,7 @@ services:
       APP_ENV: "${APP_ENV}"
       XDEBUG_HOST: "${XDEBUG_HOST}"
     volumes:
-     - ./express:/var/www/html/backend:cached
+     - ./express:/var/www/html/express:cached
      - ./nuxt:/var/www/html/nuxt:cached
     networks:
      - sdnet
@@ -18,7 +18,7 @@ services:
     build:
       context: ./docker/express
       dockerfile: Dockerfile
-    image: ball-scrape/node
+    image: ball-scrape/express
     restart: always
     volumes:
      - ./express:/var/www/html/express:cached
@@ -28,7 +28,7 @@ services:
     build:
       context: ./docker/nuxt
       dockerfile: Dockerfile
-    image: ball-scrape/node
+    image: ball-scrape/nuxt
     restart: always
     volumes:
      - ./nuxt:/var/www/html/nuxt:cached

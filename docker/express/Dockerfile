@@ -12,6 +12,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 EXPOSE 8080
 
-WORKDIR /var/www/html/backend
+WORKDIR /var/www/html/express
 
 CMD ["yarn", "dev"]
